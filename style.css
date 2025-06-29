@@ -1,0 +1,314 @@
+/* Fichier style.css */
+:root {
+  --primary-color: #000000;
+  --secondary-color: #d1981e;
+  --accent-color: #333333;
+  --light-bg: #F5F5F5;
+  --text-color: #222222;
+  --white: #ffffff;
+  --dark-gray: #1A1A1A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
+  color: var(--white);
+  text-align: center;
+  padding: 15px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.header-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  margin-left: 18%;
+}
+
+.logo {
+  width: 90px;              /* زيادة حجم اللوجو */
+  height: 90px;             /* زيادة حجم اللوجو */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--white);  /* زيادة سمك الحدود */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;       /* زيادة المسافة بين اللوجو والنص */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.header-text {
+  text-align: left;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;          /* زيادة حجم النص */
+  font-weight: 700;
+  color: var(--secondary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+nav {
+  margin-top: 20px;         /* زيادة المسافة */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;                /* زيادة المسافة بين الأيقونات */
+  padding: 10px 0;          /* زيادة المساحة الداخلية */
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;          /* زيادة المساحة الداخلية */
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+  min-width: 60px;          /* زيادة العرض الأدنى */
+  text-align: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a:hover {
+  background-color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav a i {
+  font-size: 1.5rem;        /* زيادة حجم الأيقونات */
+}
+
+.section {
+  padding: 30px 15px;       /* زيادة المساحة */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section h2 {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--secondary-color); /* زيادة سمك الحد */
+  padding-bottom: 10px;
+  font-size: 1.6rem;        /* زيادة حجم الخط */
+  margin-bottom: 25px;      /* زيادة المسافة */
+  display: flex;
+  align-items: center;
+}
+
+.section h2 i {
+  margin-right: 15px;       /* زيادة المسافة */
+  font-size: 1.5rem;        /* زيادة حجم الأيقونة */
+  color: var(--primary-color);
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;                /* زيادة المسافة بين العناصر */
+  margin-top: 20px;         /* زيادة المسافة */
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  padding: 20px;            /* زيادة المساحة الداخلية */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  border-left: 5px solid var(--secondary-color); /* زيادة سمك الحد */
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.grid-item img {
+  width: 80px;              /* زيادة حجم الصور */
+  height: 80px;             /* زيادة حجم الصور */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;       /* زيادة المسافة */
+  border: 3px solid var(--secondary-color); /* زيادة سمك الحد */
+  flex-shrink: 0;
+}
+
+.grid-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid-text h4 {
+  margin: 0;
+  font-size: 1.3rem;        /* زيادة حجم الخط */
+  color: var(--primary-color);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-text p {
+  margin: 10px 0 0;         /* زيادة المسافة */
+  font-size: 1rem;          /* زيادة حجم الخط */
+  color: var(--accent-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.4rem;        /* زيادة حجم الخط */
+  margin-left: 15px;        /* زيادة المسافة */
+  min-width: 60px;          /* زيادة العرض الأدنى */
+  text-align: right;
+  flex-shrink: 0;
+}
+
+footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
+  color: var(--white);
+  text-align: center;
+  padding: 30px 15px;       /* زيادة المساحة الداخلية */
+  margin-top: 40px;         /* زيادة المسافة */
+  font-size: 1rem;          /* زيادة حجم الخط */
+}
+
+footer p {
+  margin: 15px 0;           /* زيادة المسافة */
+}
+
+.signature {
+  font-style: italic;
+  margin-top: 20px;         /* زيادة المسافة */
+  color: var(--secondary-color);
+  font-size: 1rem;          /* زيادة حجم الخط */
+}
+
+.social-icons {
+  margin-top: 20px;         /* زيادة المسافة */
+  display: flex;
+  justify-content: center;
+  gap: 25px;                /* زيادة المسافة بين الأيقونات */
+}
+
+.social-icons a {
+  color: var(--white);
+  font-size: 1.6rem;        /* زيادة حجم الأيقونات */
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-5px);
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 480px) {
+
+  .logo-container{
+    margin-left: 10%;
+  }
+  .logo {
+    width: 80px;            /* زيادة من 50px إلى 80px */
+    height: 80px;           /* زيادة من 50px إلى 80px */
+  }
+
+  h1 {
+    font-size: 1.8rem;      /* زيادة حجم الخط */
+  }
+
+  .section {
+    padding: 25px 10px;     /* زيادة المساحة الداخلية */
+  }
+
+  .section h2 {
+    font-size: 1.5rem;      /* زيادة حجم الخط */
+  }
+
+  .grid-item {
+    padding: 15px;          /* زيادة المساحة الداخلية */
+  }
+
+  .grid-item img {
+    width: 70px;            /* زيادة حجم الصور */
+    height: 70px;           /* زيادة حجم الصور */
+    margin-right: 15px;     /* زيادة المسافة */
+  }
+
+  .price {
+    font-size: 1.3rem;      /* زيادة حجم الخط */
+  }
+}
+
+@media (max-width: 350px) {
+    .logo-container{
+    margin-left: 12%;
+  }
+  .logo {
+    width: 70px;            /* زيادة من 45px إلى 70px */
+    height: 70px;           /* زيادة من 45px إلى 70px */
+  }
+
+  h1 {
+    font-size: 1.6rem;      /* زيادة حجم الخط */
+  }
+
+  nav a {
+    min-width: 50px;        /* زيادة العرض الأدنى */
+    padding: 8px 0;         /* زيادة المساحة الداخلية */
+  }
+
+  nav a i {
+    font-size: 1.3rem;      /* زيادة حجم الأيقونات */
+  }
+}
